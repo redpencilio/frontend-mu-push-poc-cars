@@ -1,0 +1,28 @@
+{
+    "data" : [
+        {
+            "type": "cars",
+            "id": "f3",
+            "attributes": {
+                "brand": "ferrari",
+                "model": "458"
+            }
+        },
+        {
+            "type": "cars",
+            "id": "3",
+            "attributes": {
+                "brand": "bmw",
+                "model": "i8"
+            }
+        },
+        {
+            "type": "cars",
+            "id": "1",
+            "attributes": {
+                "brand": "volvo",
+                "model": "xc90"
+            }
+        }
+    ]
+}

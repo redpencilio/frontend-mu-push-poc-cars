@@ -1,0 +1,23 @@
+{{page-title "Car"}}
+
+<Jumbo>
+
+<h3>Add a new car to your garage</h3>
+<form {{on "submit" this.createCar}} >
+<Input @value={{this.brand}} @placeholder="brand" />
+<Input @value={{this.model}} @placeholder="model" />
+<button type="submit">Create</button>
+</form>
+
+<h3>These cars are already in your garage</h3>
+<ul>
+    {{#each @model as |car|}}
+        <li>
+            <Car @car={{car}} />
+            <button {{on "click" (fn this.removeCar car)}}>Remove car</button>
+        </li>
+    {{/each}}
+</ul>
+
+
+</Jumbo>
