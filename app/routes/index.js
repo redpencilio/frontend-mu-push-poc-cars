@@ -5,6 +5,9 @@ export default class IndexRoute extends Route {
   @service store;
 
   async model() {
-    return this.store.findAll('car');
+    return this.store
+      .findAll('car')
+      .then((cars) => cars.sortBy('model'))
+      .then((cars) => cars.sortBy('brand'));
   }
 }

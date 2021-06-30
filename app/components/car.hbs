@@ -1,2 +1,7 @@
-<h5>Brand: {{@car.brand}}</h5>
-<h5>Model: {{@car.model}}</h5>
+<h3>Brand: {{@car.brand}} | Model: {{@car.model}}</h3>
+
+<form {{on "submit" (fn this.updateCar @car.id)}} >
+<Input @value={{this.brand}} @placeholder="brand" />
+<Input @value={{this.model}} @placeholder="model" />
+<button type="submit">Update</button>
+</form>

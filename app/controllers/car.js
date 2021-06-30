@@ -6,19 +6,19 @@ import { inject as service } from '@ember/service';
 export default class CarController extends Controller {
   @service store;
   @tracked brand = '';
-  @tracked model = '';
+  @tracked carModel = '';
 
   @action
   createCar(event) {
     event.preventDefault();
     const car = this.store.createRecord('car', {
       brand: this.brand,
-      model: this.model,
+      model: this.carModel,
     });
     car.save();
 
     this.brand = '';
-    this.model = '';
+    this.carModel = '';
   }
 
   @action
