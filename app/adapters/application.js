@@ -7,4 +7,10 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
   buildURL(...args) {
     return `${super.buildURL(...args)}`;
   }
+
+  get headers() {
+    return {
+      'MU-TAB-ID': window.identifier,
+    };
+  }
 }

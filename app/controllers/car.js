@@ -11,7 +11,6 @@ export default class CarController extends Controller {
   @action
   createCar(event) {
     event.preventDefault();
-
     const car = this.store.createRecord('car', {
       brand: this.brand,
       model: this.model,
