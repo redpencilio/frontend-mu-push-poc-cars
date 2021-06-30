@@ -12,7 +12,10 @@ module('Integration | Component | car', function (hooks) {
 
     await render(hbs`<Car />`);
 
-    assert.equal(this.element.textContent.trim(), 'Brand: \nModel:');
+    assert.equal(
+      this.element.textContent.trim(),
+      'Brand:  | Model: \n\n\n\n\nUpdate'
+    );
 
     this.set('car', {
       brand: 'test-brand',
@@ -28,7 +31,7 @@ module('Integration | Component | car', function (hooks) {
 
     assert.equal(
       this.element.textContent.trim(),
-      'Brand: test-brand\nModel: test-model'
+      'Brand: test-brand | Model: test-model\n\n\n\n\nUpdate'
     );
   });
 });
