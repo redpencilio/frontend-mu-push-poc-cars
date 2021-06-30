@@ -5,7 +5,6 @@ export default class CarRoute extends Route {
   @service store;
 
   async model() {
-    console.log(`ID is: ${window.identifier}`);
     return this.store.findAll('car');
   }
 }

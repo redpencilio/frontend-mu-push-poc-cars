@@ -1,8 +1,10 @@
 export function initialize(appInstance) {
   // appInstance.inject('route', 'foo', 'service:foo');
-  let identifier = new Date().toString();
-  appInstance.register('identifier:main', identifier);
-  window.identifier = identifier;
+  fetch('uuid')
+    .then((response) => response.json())
+    .then((data) => {
+    window.identifier = data.uuid;
+    });
 }
 
 export default {
