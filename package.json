@@ -66,5 +66,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "ember-wo-push-updates": "file:../ember-wo-push-updates"
   }
 }
