@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'cars',
     environment,
-    rootURL: '/',
+    rootURL: '/garage/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
