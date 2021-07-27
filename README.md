@@ -1,7 +1,7 @@
 # cars
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a poc showing what can be done with cache-clear push-updates using [the ember-wo-push-updates](https://github.com/redpencilio/ember-wo-push-updates) addon.
+The application has full CRUD functionality for cars
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/Jan-PieterBaert/redpencil-cars` this repository
 * `cd cars`
 * `npm install`
 
