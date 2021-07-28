@@ -3,12 +3,12 @@ import { inject as service } from '@ember/service';
 
 export default class IndexController extends Controller {
   @service store;
-  @service pushUpdates;
+  @service pushUpdatesWs;
   cars = this.store.findAll('car');
 
   constructor() {
     super(...arguments);
-    this.pushUpdates.addPollCallbackFunction((data, type, realm) => {
+    this.pushUpdatesWs.addPollCallbackFunction((data, type, realm) => {
       // Push-update for type cache-clear means the cache has cleared and we need to update a variable
       if (
         realm.value === 'http://cache' &&
